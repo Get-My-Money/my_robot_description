@@ -1,0 +1,13 @@
+<launch>
+  <!-- Load URDF -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find my_robot_description)/urdf/robot.urdf" />
+
+  <!-- Robot State Publisher -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <!-- Move Joints Script -->
+  <node name="move_joints" pkg="my_robot_description" type="move_joints.py" output="screen" />
+
+  <!-- RViz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_robot_description)/rviz/robot.rviz" required="true" />
+</launch>

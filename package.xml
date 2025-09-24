@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>my_robot_description</name>
+  <version>0.1.0</version>
+  <description>
+    Simple 3-DOF robot manipulator with URDF model and auto-moving joints.
+  </description>
+
+  <maintainer email="ma.zakharov@innopolis.university">Mark Zakharov</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>rospy</depend>
+  <depend>urdf</depend>
+  <depend>xacro</depend>
+  <depend>rviz</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>joint_state_publisher</depend>
+</package>
